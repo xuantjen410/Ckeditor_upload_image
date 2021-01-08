@@ -38,11 +38,14 @@ export class AppComponent {
   data: any = `<p>Hello, world!</p>`;
 
 
-   onReady(eventData) {
-    eventData.plugins.get('FileRepository').createUploadAdapter =  (loader => {
-      console.log('loader : ', loader);
-      console.log(btoa(loader.file));
-      return new UploadAdapter(loader);
+  public onReady( editor ) {
+    editor.plugins.get('FileRepository').createUploadAdapter =  (loader => {
+          console.log('loader : ', loader);
+          console.log(btoa(loader.file));
+          return new UploadAdapter(loader);
     });
-  }
+    editor.ui.view.editable.element.parentElement.insertBefore(
+        editor.ui.view.toolbar.element,
+        editor.ui.view.editable.element
+    );
 }
