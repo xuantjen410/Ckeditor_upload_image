@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import DecoupledEditor from '@ckeditor/ckeditor5-build-decoupled-document';
 import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
 import { environment } from 'src/environments/environment';
-import * as Editor from '@app/../src/assets/ngClassicEditor/build/ckeditor.js';
+// import * as Editor from '@app/../src/assets/ngClassicEditor/build/ckeditor.js';
 import InlineEditor from '@ckeditor/ckeditor5-build-inline';
 import EditorClass from '@ckeditor/ckeditor5-build-classic';
 import ClassOne from '@ckeditor/ckeditor5-build-balloon';
@@ -48,4 +48,5 @@ export class AppComponent {
         editor.ui.view.toolbar.element,
         editor.ui.view.editable.element
     );
+}
 }
